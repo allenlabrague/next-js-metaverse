@@ -5,6 +5,7 @@ import styles from "@/styles";
 import { staggerContainer, fadeIn, planetVariants } from "@/utils/motion";
 import { NewFeatures, TitleText, TypingText } from "..";
 import { newFeatures } from "@/constants";
+import { Image } from "@nextui-org/image";
 
 const WhatsNew = () => (
   <section className={`${styles.paddings} relative z-10`}>
@@ -31,7 +32,7 @@ const WhatsNew = () => (
         variants={planetVariants("right")}
         className={`${styles.flexCenter} flex-1`}
       >
-        <img
+        <Image
           src="/whats-new.png"
           alt="whats-new"
           className="w-[90%] h=[90%] object-contain"

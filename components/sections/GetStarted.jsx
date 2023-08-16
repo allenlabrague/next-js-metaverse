@@ -3,8 +3,9 @@
 import { motion } from "framer-motion";
 import styles from "@/styles";
 import { staggerContainer, fadeIn, planetVariants } from "@/utils/motion";
-import { StartSteps, TitleText, ExploreCard, TypingText } from "..";
+import { StartSteps, TitleText, TypingText } from "..";
 import { startingFeatures } from "@/constants";
+import { Image } from "@nextui-org/image";
 
 const GetStarted = () => (
   <section className={`${styles.paddings} relative z-10`}>
@@ -19,7 +20,7 @@ const GetStarted = () => (
         variants={planetVariants("left")}
         className={`${styles.flexCenter} flex-1`}
       >
-        <img
+        <Image
           src="/get-started.png"
           alt="get-started"
           className="w-[90%] h=[90%] object-contain"

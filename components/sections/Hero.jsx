@@ -3,9 +3,10 @@
 import { motion } from "framer-motion";
 import styles from "@/styles";
 import { slideIn, staggerContainer, textVariant } from "@/utils/motion";
+import { Image } from "@nextui-org/image";
 
 const Hero = () => (
-  <section className={`${styles.yPaddings} sm:pl-16 pl-6`}>
+  <section className={`${styles.yPaddings}`}>
     <motion.div
       variants={staggerContainer}
       initial="hidden"
@@ -31,7 +32,7 @@ const Hero = () => (
       </div>
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="relative w-full md:-mt-[40px] -mt-[25px]"
+        className="relative w-full md:-mt-[40px] -mt-[25px] pl-6 md:pl-0"
       >
         <img
           src="/cover.png"
@@ -40,9 +41,7 @@ const Hero = () => (
         />
         <a href="#explore">
           <div className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px] z-10 relative">
-            <motion.img
-              animate={{ rotate: 360 }}
-              transition={{ ease: "linear", duration: 3, repeat: Infinity }}
+            <Image
               src="/stamp.png"
               alt="stamp"
               className="sm:w-[155px] w-[100px] sm:h-[155px] h-[100px] object-contain"

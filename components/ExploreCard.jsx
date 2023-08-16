@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import styles from "@/styles";
 import { fadeIn } from "@/utils/motion";
+import { Image } from "@nextui-org/image";
 
 const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
   <motion.div
@@ -26,16 +27,16 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
         <div
           className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism mb-[16px]`}
         >
-          <img
+          <Image
             src="/headset.svg"
             alt="headset"
-            className="w-1/2 h-1/2 object-contain"
+            className="w-[30px] h-[30px]"
           />
         </div>
-        <p className="text-[16px] font-normal text-white uppercase leading-[20px]">
+        <p className="text-[12px] md:text-[16px] font-normal text-white uppercase leading-[10px] md:leading-[20px]">
           Enter the Metaverse
         </p>
-        <h2 className="mt-[24px] font-semibold sm:text-[32px] text-[24px] text-white">
+        <h2 className="mt-[12px] md:mt-[24px] font-semibold md:text-[32px] text-[16pxpx] text-white">
           {title}
         </h2>
       </div>
